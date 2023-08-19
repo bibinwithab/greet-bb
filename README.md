@@ -12,6 +12,8 @@
 
 ## Install
 
+Make sure you have node and npm installed in your machine
+
 ```sh
 npm install greet-bb
 ```
