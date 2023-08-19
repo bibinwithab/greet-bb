@@ -1,13 +1,20 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
+
+const figlet = require('figlet');
 
 const prompt = require('prompt-sync')();
-const chalk  = require('chalk');
 
 async function greet() {
-
-    console.log(chalk.blue("who is this?"));
+    console.log(("Who is this?"));
     let name = prompt(">");
-    console.log(`Hello ${name}`);
+
+    figlet(`Hello ${name}`, (err, data) => {
+        if (err) {
+            console.log(`Hello ${name}`);
+        } else {
+            console.log((data));
+        }
+    });
 }
 
 greet();
