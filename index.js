@@ -1,10 +1,11 @@
 #! /usr/bin/env node
 
+const prompt = require('prompt-sync')();
+const chalk  = require('chalk');
+
 async function greet() {
 
-    const prompt = require('prompt-sync')();
-
-    console.log("who is this?")
+    console.log(chalk.blue("who is this?"));
     let name = prompt(">");
     console.log(`Hello ${name}`);
 }
