@@ -18,7 +18,7 @@ function version(){
 function call(){
     const args = process.argv.slice(2);
         if (args.length == 0) {
-            greet(args[0]);
+            console.log("Please provide a name or use the '-h' flag for help.");
         } 
         else if (args.length == 1) {
             if (args[0] == '-h' || args[0] == '--help') {
