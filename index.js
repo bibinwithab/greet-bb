@@ -33,7 +33,6 @@ function call(){
 
 function greet(n){
     const name = n;
-    callBoss(name);
     figlet( `Hello ${name}`, (err,data) => {
         if(err){
             console.log('Hello nameless being');
