@@ -3,7 +3,7 @@
 const figlet = require('figlet');
 
 
-const packageVersion = "1.0.3";
+const packageVersion = "1.0.4";
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
