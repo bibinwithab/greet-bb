@@ -25,10 +25,13 @@ npm install -g https://github.com/bibinwithab/greet-bb
 
 ## Usage
 
-Usage: greet [OPTIONS] <or> [MESSAGE]
-    -h,    --help         Display this help message
-    -v,   --version       Display the version of greet
-    [your name],            Display a greeting message for you
+```sh
+greet [OPTIONS] <or> [NAME]
+```
+  -h,    --help         Display this help message<br>
+  -v,   --version       Display the version of greet<br>
+  [NAME],               Display a greeting message for you<br>
+
 ## Run tests
 
 ```sh
