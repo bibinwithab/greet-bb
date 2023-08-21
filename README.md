@@ -32,11 +32,6 @@ greet [OPTIONS] <or> [NAME]
   -v,   --version       Display the version of greet<br>
   [NAME],               Display a greeting message for you<br>
 
-## Run tests
-
-```sh
-npm run test
-```
 
 ## Author
 
