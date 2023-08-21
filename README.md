@@ -12,12 +12,23 @@
 
 ## Install
 
-Make sure you have node and npm installed in your machine
+To install through npm
 
 ```sh
-npm install greet-bb
+npm install -g greet-bb
+```
+To install through github
+
+```sh
+npm install -g https://github.com/bibinwithab/greet-bb
 ```
 
+## Usage
+
+Usage: greet [OPTIONS] <or> [MESSAGE]
+    -h,    --help         Display this help message
+    -v,   --version       Display the version of greet
+    [your name],            Display a greeting message for you
 ## Run tests
 
 ```sh
