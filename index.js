@@ -33,9 +33,10 @@ function call(){
 
 function greet(n){
     const name = n;
-    figlet( `Hello ${name}`,'doh', (err,data) => {
+    figlet( `Hello ${name}`,'Doh', (err,data) => {
         if(err){
-            console.log('Hello nameless being');
+            console.error("Error occurred while generating figlet text:", err);
+            console.log(`Hello ${name}`);
         }
         else{
             console.log((data));
