@@ -3,7 +3,7 @@
 const figlet = require('figlet');
 
 
-const packageVersion = "1.0.7";
+const packageVersion = "1.0.8";
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
@@ -33,7 +33,7 @@ function call(){
 
 function greet(n){
     const name = n;
-    figlet( `Hello ${name}`, (err,data) => {
+    figlet( `Hello ${name}`,'doh', (err,data) => {
         if(err){
             console.log('Hello nameless being');
         }
