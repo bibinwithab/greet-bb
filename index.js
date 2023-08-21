@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const figlet = require('figlet');
+const fs = require('fs');
 
 const prompt = require('prompt-sync')();
 
