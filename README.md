@@ -28,9 +28,9 @@ npm install -g https://github.com/bibinwithab/greet-bb
 ```sh
 greet [OPTIONS] <or> [NAME]
 ```
-  -h,    --help         Display this help message<br>
-  -v,   --version       Display the version of greet<br>
-  [NAME],               Display a greeting message for you<br>
+  -h,    --help<space><space>         Display this help message<br>
+  -v,   --version<space><space>       Display the version of greet<br>
+  [NAME],<space><space>               Display a greeting message for you<br>
 
 
 ## Author
