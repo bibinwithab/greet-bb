@@ -31,9 +31,21 @@ function call(){
         }
 }
 
-function greet(n){
+async function fetchQuote(){
+    const url = 'https://api.quotable.io/random';
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    catch(error){
+        console.log("Error occurred while fetching quote:", error);
+    }
+}
+
+async function greet(n){
     const name = n;
-    figlet( `Hello ${name}`,'Doh', (err,data) => {
+    figlet( `Hello ${name}`,'Standard', (err,data) => {
         if(err){
             console.error("Error occurred while generating figlet text:", err);
             console.log(`Hello ${name}`);
@@ -42,6 +54,13 @@ function greet(n){
             console.log((data));
         }
     });
+
+    const quote = await fetchQuote();
+
+    if(quote){
+        console.log(`${quote.content}\n`);
+        console.log(`-${quote.author}\n`);
+    }
 }
 
 
