@@ -46,7 +46,7 @@ async function fetchQuote(){
 
 async function greet(n){
     const name = n;
-    figlet(`Hello ${name}`,'Standard', (err,data) => {
+    figlet(`Hello ${name}`,'Larry 3D 2', (err,data) => {
         if(err){
             console.error("Error occurred while generating figlet text:", err);
             console.log(`Hello ${name}`);
