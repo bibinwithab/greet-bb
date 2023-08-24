@@ -3,8 +3,7 @@
 import chalk from 'chalk';
 import figlet from 'figlet';
 
-
-const packageVersion = "1.1.0";
+const packageVersion = '1.1.1'
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
