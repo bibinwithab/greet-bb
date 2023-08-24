@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-const figlet = require('figlet');
-
+import chalk from 'chalk';
+import figlet from 'figlet';
 
 
 const packageVersion = "1.1.0";
@@ -46,7 +46,7 @@ async function fetchQuote(){
 
 async function greet(n){
     const name = n;
-    figlet( `Hello ${name}`,'Standard', (err,data) => {
+    figlet(`Hello ${name}`,'Standard', (err,data) => {
         if(err){
             console.error("Error occurred while generating figlet text:", err);
             console.log(`Hello ${name}`);
@@ -59,7 +59,8 @@ async function greet(n){
     const quote = await fetchQuote();
 
     if(quote){
-        console.log(`${quote.content}\n`);
+        let content = chalk.greenBright(quote.content);
+        console.log(`${content}\n`);
         console.log(`-${quote.author}\n`);
     }
 }
