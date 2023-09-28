@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const figlet = require('figlet');
+import chalk from 'chalk';
+import figlet from 'figlet';
 
-
-const packageVersion = "1.0.8";
+const packageVersion = '1.1.1'
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
@@ -18,7 +18,7 @@ function version(){
 function call(){
     const args = process.argv.slice(2);
         if (args.length == 0) {
-            console.log("Please provide a name or use the '-h' flag for help.");
+            console.log("\nPlease provide a name or use the '-h' flag for help\n");
         } 
         else if (args.length == 1) {
             if (args[0] == '-h' || args[0] == '--help') {
@@ -31,16 +31,37 @@ function call(){
         }
 }
 
-function greet(n){
+async function fetchQuote(){
+    const url = 'https://api.quotable.io/random';
+    try{
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    catch(error){
+        console.log("Error occurred while fetching quote:", error);
+    }
+}
+
+async function greet(n){
     const name = n;
-    figlet( `Hello ${name}`,'doh', (err,data) => {
+    figlet(`Hello ${name}`,'Larry 3D 2', (err,data) => {
         if(err){
-            console.log('Hello nameless being');
+            console.error("Error occurred while generating figlet text:", err);
+            console.log(`Hello ${name}`);
         }
         else{
             console.log((data));
         }
     });
+
+    const quote = await fetchQuote();
+
+    if(quote){
+        let content = chalk.greenBright(quote.content);
+        console.log(`${content}\n`);
+        console.log(`-${quote.author}\n`);
+    }
 }
 
 
