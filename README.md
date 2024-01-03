@@ -39,6 +39,16 @@ greet [OPTIONS] <or> [NAME]
 
 * Github: [@bibinwithab](https://github.com/bibinwithab)
 
+## Contributing
+
+Contributions are welcome! To contribute to `greet-bb`, follow these steps:
+
+1. Fork the repository.
+2. Create a branch: `git checkout -b feature/new-feature`.
+3. Make your changes and commit them: `git commit -m 'Add new feature'`.
+4. Push to the branch: `git push origin feature/new-feature`.
+5. Submit a pull request.
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
