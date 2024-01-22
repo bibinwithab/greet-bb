@@ -2,8 +2,9 @@
 
 import chalk from 'chalk';
 import figlet from 'figlet';
+import readlineSync from 'readline-sync';
 
-const packageVersion = '1.1.1'
+const packageVersion = '1.1.2'
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
@@ -18,7 +19,8 @@ function version(){
 function call(){
     const args = process.argv.slice(2);
         if (args.length == 0) {
-            console.log("\nPlease provide a name or use the '-h' flag for help\n");
+            const name = readlineSync.question('Please provide a name: ');
+        greet(name);
         } 
         else if (args.length == 1) {
             if (args[0] == '-h' || args[0] == '--help') {
