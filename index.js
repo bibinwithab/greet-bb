@@ -34,7 +34,7 @@ function call(){
 }
 
 async function fetchQuote(){
-    const url = 'https://api.quotable.io/random';
+    const url = 'https://dummyjson.com/quotes/random';
     try{
         const response = await fetch(url);
         const data = await response.json();
@@ -60,8 +60,8 @@ async function greet(n){
     const quote = await fetchQuote();
 
     if(quote){
-        let content = chalk.greenBright(quote.content);
-        console.log(`${content}\n`);
+        let content = chalk.greenBright(quote.quote);
+        console.log(`\n${content}\n`);
         console.log(`-${quote.author}\n`);
     }
 }
