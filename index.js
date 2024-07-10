@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import figlet from 'figlet';
 import readlineSync from 'readline-sync';
 
-const packageVersion = '1.1.2'
+const packageVersion = '1.1.3'
 
 function help(){
     console.log('Usage: greet [OPTIONS] <or> [MESSAGE]');
